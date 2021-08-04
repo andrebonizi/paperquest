@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#container, #floor {
+    width: 100vw;
+    overflow: hidden;
+}
+#container {
+    height: 100vh;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+}
+#scene {
+    height: 70vh;
+    background: linear-gradient(to left, white, black);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    position: relative;
+    width: 6000px;
+    transition: 300ms ease-out;
+}
+#floor {
+    height: 30vh;
+    background-color: black;
+}
+#player {
+    width: 64px;
+    position: fixed;
+    transition: 300ms ease-out;
+    z-index: 1;
+}
+.enemy {
+    background-color: lightcoral;
+    width: 64px;
+    position: absolute;
+    transition: 300ms ease-out;
+}
+.npc {
+    background-color: lightgreen;
+    width: 64px;
+    position: absolute;
+}
+.item {
+    background-color: yellow;
+    width: 32px;
+    position: absolute;
+}
+.look-right {
+    transform: scaleX(-1);
+}
+.look-left {
+    transform: scaleX(1);
+}
+.crouch {
+    height: 64px;
+}
+.stand {
+    height: 128px;
+}
