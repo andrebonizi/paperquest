@@ -86,12 +86,11 @@ function start() {
 }
 
 function collision(other) {
-    let playerPosition = parseInt(player.dataset.position/100);
+    let playerPosition = parseInt(player.dataset.position);
     console.log('player:', playerPosition)
-    //let otherPosition = parseInt(other.style.left.replace('-', '').replace('px', ''))/100;
-    let otherPosition = parseInt(other.dataset.position/100);
+    let otherPosition = parseInt(other.dataset.position);
     console.log('other:', otherPosition)
-    return (playerPosition >= otherPosition && playerPosition < otherPosition+1)
+    return (playerPosition+32 >= otherPosition-32 && playerPosition-32 < otherPosition+32)
 }
 
 var observer = new MutationObserver(function(mutations) {
