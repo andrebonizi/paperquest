@@ -32,6 +32,11 @@
     transition: 300ms ease-out;
     z-index: 1;
 }
+#voice {
+    width: 90%;
+    position: fixed;
+    z-index: 2;
+}
 .enemy {
     background-color: lightcoral;
     width: 64px;
